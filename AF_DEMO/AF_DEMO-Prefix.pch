@@ -1,0 +1,32 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "Constants.h"
+    #define GAD_AD_ID @"a1536b1249272c2"
+    #define ProductIdentifier @"INAPP_RESTORE_3"
+
+    #define REVMOB_ID @"5106be9d0639b41100000052"
+    #define PLACEMENT_ID_BANNER @"5107dfde9c1d2f160000005f"
+    #define PLACEMENT_ID_FULLSCREEN @"5107dfdeb909351500000071"
+
+#endif
+
+
+//Code to use for DLog instead of NSLog
+#ifdef DEBUG
+#    define DLog(...) NSLog(__VA_ARGS__)
+#else
+#    define DLog(...)
+#endif
